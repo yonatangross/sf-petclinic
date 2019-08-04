@@ -3,7 +3,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
-
+    <groupId>yonatangross.spring</groupId>
+    <artifactId>sf-petclinic</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>sf-petclinic</name>
+    <description>Spring Framework - Pet Clinic Project</description>
     <modules>
         <module>pet-clinic-data</module>
         <module>pet-clinic-web</module>
@@ -15,11 +19,6 @@
         <version>2.1.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>yonatangross.spring</groupId>
-    <artifactId>sf-petclinic</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>sf-petclinic</name>
-    <description>Spring Framework - Pet Clinic Project</description>
     <properties>
         <java.version>12</java.version>
     </properties>
@@ -31,7 +30,16 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <goals>install</goals>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
+    <scm>
+        <developerConnection>scm:git:https://github.com/yonatangross/sf-petclinic.git</developerConnection>
+    </scm>
 </project>
