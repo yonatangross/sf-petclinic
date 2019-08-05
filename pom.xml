@@ -4,7 +4,7 @@
     <packaging>pom</packaging>
     <groupId>yonatangross.spring</groupId>
     <artifactId>sf-petclinic</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.4-SNAPSHOT</version>
     <name>sf-petclinic</name>
     <description>Spring Framework - Pet Clinic Project</description>
     <modules>
@@ -34,6 +34,7 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <configuration>
                     <goals>install</goals>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
                 </configuration>
             </plugin>
         </plugins>
