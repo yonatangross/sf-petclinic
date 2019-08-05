@@ -4,7 +4,7 @@
     <packaging>pom</packaging>
     <groupId>yonatangross.spring</groupId>
     <artifactId>sf-petclinic</artifactId>
-    <version>0.0.4</version>
+    <version>0.0.5-SNAPSHOT</version>
     <name>sf-petclinic</name>
     <description>Spring Framework - Pet Clinic Project</description>
     <modules>
@@ -41,6 +41,6 @@
     </build>
     <scm>
         <developerConnection>scm:git:https://github.com/yonatangross/sf-petclinic.git</developerConnection>
-      <tag>0.0.4</tag>
+      <tag>HEAD</tag>
   </scm>
 </project>
