@@ -6,18 +6,15 @@ import yonatangross.spring.sfpetclinic.model.Owner;
 import yonatangross.spring.sfpetclinic.model.Vet;
 import yonatangross.spring.sfpetclinic.services.OwnerService;
 import yonatangross.spring.sfpetclinic.services.VetService;
-import yonatangross.spring.sfpetclinic.services.map.OwnerMapService;
-import yonatangross.spring.sfpetclinic.services.map.VetMapService;
 
 @Component
 public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
-
-    public DataLoader() {
-        ownerService=new OwnerMapService();
-        vetService=new VetMapService();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
