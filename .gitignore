@@ -29,3 +29,6 @@ build/
 
 ### VS Code ###
 .vscode/
+pom.xml.releaseBackup
+pet-clinic-web/pom.xml.releaseBackup
+pet-clinic-data/pom.xml.releaseBackup
