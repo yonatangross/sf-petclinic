@@ -1,13 +1,23 @@
 package yonatangross.spring.sfpetclinic.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import yonatangross.spring.sfpetclinic.services.OwnerService;
 
+@RequestMapping("/owners")
 @Controller
 public class OwnerController {
+    private final OwnerService ownerService;
 
-    @RequestMapping({"/owners", "/owners/index", "/owners/index.html"})
-    public String listOwners() {
+    public OwnerController(OwnerService ownerService) {
+        this.ownerService = ownerService;
+    }
+
+    @RequestMapping({"","/", "/index", "/index.html"})
+    public String listOwners(Model model) {
+        model.addAttribute("owners", ownerService.findAll());
+
         return "owners/index";
     }
 }
